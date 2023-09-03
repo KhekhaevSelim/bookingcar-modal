@@ -1,0 +1,26 @@
+
+.dateInputContainer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.dateInput{
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 18px;
+    color: #5A5A5A;
+    font-weight: 500;
+}
+.dateInput::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    z-index: 10;
+  }
+.dateIcon{
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    z-index: 2;
+}

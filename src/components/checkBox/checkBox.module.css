@@ -1,0 +1,53 @@
+.container{
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftPart{
+    width: 100%;
+    display: flex;
+    margin-left: 2px;
+}
+.customCheckboxContainer{
+position: relative;
+}
+.customCheckbox{
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    display: block;
+    border-radius: 4px;
+    position: absolute;
+    top: -1px;
+    cursor: pointer;
+}
+.customCheckbox img{
+    position: relative;
+    left: 6px;
+    top: 3px;
+}
+.hiddenCheckbox{
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+}
+.leftPart p{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-text-color);
+  margin: 2px 0 0 35px;
+}
+.input{
+border: none;
+width: 43.5%;
+height: 40px;
+border-radius: 5px;
+padding: 15px 10px;
+font-size: 18px;
+color: #5A5A5A;
+font-weight: 500;
+}

@@ -1,0 +1,71 @@
+.timeInpitContainer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.timeInput{
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: 18px;
+    color: #5A5A5A;
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+.dateIcon{
+    position: absolute;
+    top: 15px;
+    right: 13px;
+}
+
+.dropTown{
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    border-radius: 5px;
+    max-height: 256px; 
+    overflow-y: auto;
+    width: 100%;
+}
+.dropTown::-webkit-scrollbar {
+    width: 10px; 
+    border-radius: 6px;
+
+  }
+.dropTown::-webkit-scrollbar-thumb {
+    background-color: #b3b0b0; 
+    border-radius: 6px; 
+    width: 10px;
+   
+  }
+  .dropTown::-webkit-scrollbar-track {
+    background-color: #dddada;
+    width: 12px;
+    border-radius: 6px;
+    margin: 20px;
+  }
+.time{
+    list-style: none;
+    font-size: 16px;
+    height: 38px;
+    border-bottom: 1px #dddada solid;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.time:hover{
+    border-left: 3px rgb(26, 98, 207) solid;
+    padding-left: 3px;
+}
+.selectedTime{
+    border-left: 3px rgb(26, 98, 207) solid;
+    padding-left: 3px;
+}
+.dropTown :last-child{
+    border-bottom : none;
+}

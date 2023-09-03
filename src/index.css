@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:'Roboto', sans-serif;
+}
+
+body{
+    --main-text-color : #313131;
+    --second-text-color : #ACACAC; 
+    --modal-bg-color : #FBC405;
+    --btn-bg-color : #1A62CF;
+}
