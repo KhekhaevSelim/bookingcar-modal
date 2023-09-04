@@ -1,6 +1,6 @@
 .container{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -10,11 +10,12 @@
 .wrapper{
     background-color: var(--modal-bg-color);
     width: 994px;
-    height: 463px;
+    height: auto;
     border-radius: 12px;   
     display: flex;
     flex-direction: column;
     padding: 33px 19px;
+    margin: 0 20px;
 }
 
 .titleContainer{
@@ -45,6 +46,11 @@
     width: 100%;
     display: flex;
 }
+.placesContainerSelectors{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .searchCol1 {
     width: 49%;
     display: flex;
@@ -56,8 +62,29 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--main-text-color);
-  margin: 0 0 5px 2px;
+  margin: 0 0 10px 2px;
 }
+.startSelectors{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.startSelectsRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.startSelectors P{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-text-color);
+  margin: 10px 0 10px 4px;
+}
+.showSearchCol2{
+    display: none;
+    margin: 12px 0 0px 0;
+}
+
 .searchCol2 {
     width: 49%;
     display: flex;
@@ -69,8 +96,43 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--main-text-color);
-  margin: 0 0 5px 2px;
+  margin: 0 0 10px 2px;
 }
+.finishSelectors{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.finishSelectors_mob{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.finishSelectsRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finishSelectors P{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-text-color);
+    margin: 10px 0 10px 4px;
+}
+.searchCol2_mob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px 0 0 0px;
+}
+.searchCol2_mob p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-text-color);
+    margin: 0 0 5px 2px;
+  }
 .dateContainer{
     width: 100%;
     display: flex;
@@ -90,11 +152,11 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--main-text-color);
-  margin: 0 0 5px 2px;
+  margin: 8px 0 9px 4px;
 }
 .timeStart{
     width: 38%;
-    margin: 30px 0 0 13px;
+    margin: 42px 0 0 13px;
 }
 .dateCol2 {
     width: 49%;
@@ -112,11 +174,11 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--main-text-color);
-  margin: 0 0 5px 2px;
+  margin: 8px 0 9px 4px;
 }
 .timeFinish{
     width: 38%;
-    margin: 30px 0 0 13px;
+    margin: 42px 0 0 13px;
 }
 .ageAndCuponContainer{
     width: 100%;
@@ -126,4 +188,72 @@
 }
 .buttonContainer{
 width: 100%;
+}
+
+@media screen and (max-width: 1024px) {  
+.titleContainer h1{
+    font-size: 30px;
+}
+}
+@media screen and (max-width: 767px) {
+    .searchCol1 p, .searchCol2 p, .DateFinish p, .DateStart p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .DateFinish, .DateStart{
+        margin: 9px 0 0 2px;
+    }
+}
+@media screen and (max-width: 678px) {
+    .titleContainer h1{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .wrapper{
+        width: 100%;
+        margin: 0;
+        height: auto;
+        border-radius: 0;   
+    }
+    .placesContainer{
+        flex-direction: column;
+    }
+    .startSelectsRow, .finishSelectsRow{
+        flex-direction: column;
+    }
+    .finishSelectors{
+        display: none;
+    }
+    .searchCol1 {
+        width: 100%;
+    }
+    .searchCol2 {
+        display: none;;
+    }
+    .showSearchCol2{
+        display: flex;
+    }
+    .dateContainer{
+        flex-direction: column;
+    }
+    .dateCol1{
+        width: 100%;
+    }
+    .dateCol2{
+        width: 100%;
+        margin: 0 0 0 0px;
+    }
+    .ageAndCuponContainer{
+        flex-direction: column;
+        height: 135px;
+        justify-content: unset;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .titleContainer h1{
+        font-size: 26px;
+    }
 }

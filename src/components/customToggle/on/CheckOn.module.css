@@ -1,14 +1,13 @@
-.container{
+.containerOn, .containerOff{
     width: 52px;
     height: 25px;
     display: flex;
     position: relative;
-    /* bottom: 116px;
-    left: 14px; */
     margin: 0 0 0 13px;
+    cursor: pointer;
 }
 
-.container :nth-child(1){
+.containerOn :nth-child(1){
 width: 21px;
 height: 21px;
 position: absolute;
@@ -16,15 +15,27 @@ left: 29px;
 top: 2px;
 }
 
-.container :nth-child(2){
+.containerOn :nth-child(2){
     width: 52px;
     height: 25px;
 }
 
-.container :nth-child(3){
+.containerOn :nth-child(3){
     width: 12px;
     height: 12px;
     position: absolute;
     right: 29px;
     top: 7px;
 }
+
+.containerOff :nth-child(1){
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    }
+.containerOn :nth-child(2){
+    width: 52px;
+    height: 25px;
+    }

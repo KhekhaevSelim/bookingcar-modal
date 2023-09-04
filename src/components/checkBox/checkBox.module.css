@@ -51,3 +51,15 @@ font-size: 18px;
 color: #5A5A5A;
 font-weight: 500;
 }
+
+@media screen and (max-width: 639px) {
+    .container{
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+    .leftPart{
+        height: 40px;
+        position: relative;
+        top: 9px;
+    }
+}
