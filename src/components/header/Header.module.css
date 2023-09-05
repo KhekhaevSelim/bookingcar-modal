@@ -113,8 +113,9 @@
 @media screen and (max-width: 767px) {
      .container{
         height: 109px; 
-        align-items: end;
-        padding-bottom: 17px;
+        /* align-items: end;
+        padding-bottom: 17px; */ 
+        padding-top: 45px;
      }
      .burger, .closeBurdger{
         display: block;
