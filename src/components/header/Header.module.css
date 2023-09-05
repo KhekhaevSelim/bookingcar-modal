@@ -1,0 +1,128 @@
+.container{
+    width: 100vw;
+    height: 61px; 
+    background-color: #2647A5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 990px;
+    margin: 0 20px;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.myOrder, .login, .phone, .chooseLang{
+    display: flex;
+    align-items: center;
+}
+.myOrder span, .login span, .phone span {
+    font-size: 14px;
+    font-weight: 400;
+    color : white;
+}
+.chooseLang span{
+    font-size: 16px;
+    font-weight: 400;
+    color : white;
+}
+
+.myOrder{
+    text-decoration: none;
+    position: relative;
+    right: 190px;
+}
+
+.myOrder img{
+    position: relative;
+    top: 1px;
+}
+.myOrder span{
+    position: relative;
+    top: 2px;
+    left: 12px;
+}
+
+.login{
+    text-decoration: none;
+    position: relative;
+    right: 148px;
+}
+
+.login img{
+    position: relative;
+    top: 1px;
+}
+
+.login span {
+    position: relative;
+    top: 2px;
+    left: 8px;
+}
+
+.phone{
+    position: relative;
+    right: 93px;
+    cursor: pointer;
+}
+.chooseLang{
+    cursor: pointer;
+}
+.chooseLang :nth-child(1){
+    position: relative;
+    right: 53px;
+    top: 2px;
+}
+
+.chooseLang :nth-child(2){
+    position: relative;
+    right: 33px;
+    top: 2px;
+}
+
+.chooseLang :nth-child(3){
+    position: relative;
+    right: 8px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+}
+
+.burger{
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+.closeBurdger{
+    display: none;
+    width: 23px;
+    height: 23px;
+    position: relative;
+    right: 4px;
+}
+@media screen and (max-width: 767px) {
+     .container{
+        height: 109px; 
+        align-items: end;
+        padding-bottom: 17px;
+     }
+     .burger, .closeBurdger{
+        display: block;
+     }
+     .nav{
+        display: none;
+     }
+     .logo{
+        width: 157px;
+     }
+} 

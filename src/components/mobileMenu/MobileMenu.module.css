@@ -1,0 +1,197 @@
+.container {
+    background-color: #142E76;
+    width: 100%;
+    min-height: 100vh;
+    padding: 37px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.navItem{
+    text-decoration: none;
+    color : white;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-radius: 4px;
+    /* margin: 0 23px 0 0; */
+}
+
+.container :nth-child(1){
+    position: relative;
+    left: 16px;
+    bottom: 3px;
+}
+.container :nth-child(1) span{
+    position: relative;
+    left: 32px;
+    top: -2px;
+}
+
+.container :nth-child(2){
+    position: relative;
+    top: -2px;
+    left: 14px;
+}
+.container :nth-child(2) span{
+    position: relative;
+    left: 32px;
+    top: -1px;
+}
+
+.container :nth-child(3){
+    position: relative;
+    left: 11px;
+    top: 0px;
+}
+.container :nth-child(3) span{
+    position: relative;
+    left: 29px;
+    top: -1px;
+}
+
+.container :nth-child(4){
+    
+    position: relative;
+    left: 13px;
+    top: 2px;
+
+}
+.container :nth-child(4) span{
+    position: relative;
+    left: 32px;
+    top: -3px;
+}
+
+.settings{
+    font-size: 16px;
+    font-weight: 500;
+    color : #5474CC;
+    height: 45px;
+    padding: 17px 0 0 26px;
+}
+
+.container :nth-child(6){
+    
+    position: relative;
+    left: 13px;
+    top: 2px;
+
+}
+.container :nth-child(6) img{
+    position: relative;
+    left: 16px;
+    top: -1px;
+}
+.container :nth-child(6) span{
+    position: relative;
+    left: 28px;
+    top: -1px;
+}
+
+.container :nth-child(7){
+    position: relative;
+    left: 13px;
+    top: 2px;
+}
+.container :nth-child(7) img{
+    position: relative;
+    left: 16px;
+    top: 1px;
+}
+.container :nth-child(7) span{
+    position: relative;
+    left: 27px;
+    top: 1px;
+}
+
+.container :nth-child(8){
+    position: relative;
+    left: 13px;
+    top: 2px;
+}
+.container :nth-child(8) img{
+    position: relative;
+    left: 16px;
+    top: 2px;
+}
+.container :nth-child(8) span{
+    position: relative;
+    left: 29px;
+    top: 3px;
+}
+
+.navItem:hover {
+    background-color: #EDEDED;
+    color: #313131;
+}
+.navItem:hover img, .navItem:active img{
+    filter: invert(1);
+}
+
+.container :nth-child(8):hover img{
+    filter: none;
+}
+
+.useful{
+    font-size: 16px;
+    font-weight: 500;
+    color : #5474CC;
+    height: 45px;
+    padding: 26px 0 0 26px;
+}
+
+.container :nth-child(10){
+    position: relative;
+    right: -11px;
+    top: 12px;
+}
+
+.container :nth-child(10) span{
+    position: relative;
+    left: 15px;
+    top: 0px;
+}
+
+.container :nth-child(11){
+    position: relative;
+    right: -11px;
+    top: 12px;
+}
+.container :nth-child(11) span{
+    position: relative;
+    left: 13px;
+    top: 0px;
+}
+.container :nth-child(12){
+    position: relative;
+    right: -11px;
+    top: 12px;
+}
+.container :nth-child(12) span{
+    position: relative;
+    left: 13px;
+    top: 0px;
+}
+.container :nth-child(13){
+    position: relative;
+    right: -11px;
+    top: 12px;
+}
+.container :nth-child(13) span{
+    position: relative;
+    left: 13px;
+    top: 0px;
+}
+.container :nth-child(14){
+    position: relative;
+    right: -11px;
+    top: 12px;
+}
+.container :nth-child(14) span{
+    position: relative;
+    left: 13px;
+    top: 0px;
+}
