@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, .2);
 }
 
 .wrapper{
@@ -92,7 +93,7 @@ cursor: pointer;
     display: none;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 18px;
+    padding: 10px 18px 10px 22px;
 }
 .data_mob{
     display: flex;

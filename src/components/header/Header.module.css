@@ -40,17 +40,21 @@
 .myOrder{
     text-decoration: none;
     position: relative;
-    right: 190px;
+    text-decoration: none;
+    position: relative;
+    right: 176px;
 }
 
 .myOrder img{
     position: relative;
     top: 1px;
+    width: 18px;
+    right: 9px;
 }
 .myOrder span{
     position: relative;
     top: 2px;
-    left: 12px;
+    left: 3px;
 }
 
 .login{
@@ -62,17 +66,19 @@
 .login img{
     position: relative;
     top: 1px;
+    width: 22px;
+    left: 5px;
 }
 
 .login span {
     position: relative;
     top: 2px;
-    left: 8px;
+    left: 14px;
 }
 
 .phone{
     position: relative;
-    right: 93px;
+    right: 91px;
     cursor: pointer;
 }
 .chooseLang{
@@ -116,6 +122,9 @@
         /* align-items: end;
         padding-bottom: 17px; */ 
         padding-top: 45px;
+     }
+     .wrapper{
+        height: 109px
      }
      .burger, .closeBurdger{
         display: block;

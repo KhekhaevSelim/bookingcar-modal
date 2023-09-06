@@ -35,7 +35,7 @@ const Header = (props : HeaderPropsType) => {
                    <div className={style.chooseLang}>
                        <span>EUR</span>
                        <span>RU</span>
-                       <img src={langRU} alt="" />
+                       <img src={langRU} alt="lang" loading="lazy"/>
                    </div>
                </div>
                <span onClick={props.callBack}>

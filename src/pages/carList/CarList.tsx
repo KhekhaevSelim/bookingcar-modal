@@ -3,6 +3,7 @@ import Crumbs from "../../components/crumbs/Crumbs";
 import Header from "../../components/header/Header";
 import style from "./CarList.module.css";
 import MobileMenu from "../../components/mobileMenu/MobileMenu";
+import Footer from "../../components/footer/Footer";
 
 const CarList = () => {
     // храним снаружи состояние мобильного меню
@@ -34,7 +35,10 @@ const CarList = () => {
         <Crumbs startCity={fakeData.startCity} startLocation={fakeData.startLocation} startDate={fakeData.startDate} startTime={fakeData.startTime}
                 finishCity={fakeData.finishCity} finishLocation={fakeData.finishLocation} finishDate={fakeData.finishDate} finishTime={fakeData.finishTime}/>
          }
-         
+        <div className={style.fake}>
+
+        </div>
+        <Footer/>
         </div>
     )
 }
