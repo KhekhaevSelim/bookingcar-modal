@@ -14,7 +14,7 @@ const Footer = () => {
             
             <div className={style.footer}>
                 <span>
-                © 2008 - 2021 BookingCar
+                © 2008 - 2023 BookingCar
                 </span>
             </div>
 

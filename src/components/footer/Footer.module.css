@@ -28,4 +28,19 @@
 
 .footer span{
     font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    .footer span{
+        font-size: 12px;
+    }
+    .partners :nth-child(1){
+        margin-right: 20px;
+        width: 94px;
+    }
+    .partners :nth-child(2){
+        width: 167px;
+    }
 }

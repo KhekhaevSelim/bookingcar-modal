@@ -31,14 +31,42 @@ const CarList = () => {
          {
             showMobileMenu ?
         <MobileMenu/>
-            :
+        :
+        <>
+
         <Crumbs startCity={fakeData.startCity} startLocation={fakeData.startLocation} startDate={fakeData.startDate} startTime={fakeData.startTime}
                 finishCity={fakeData.finishCity} finishLocation={fakeData.finishLocation} finishDate={fakeData.finishDate} finishTime={fakeData.finishTime}/>
-         }
-        <div className={style.fake}>
+         <div className={style.centalBlock}>
+            <div className={style.wrapper}>
+               <div className={style.left}>
+                      <div className={style.filtersContainer}>
 
-        </div>
+                      </div> 
+                       <div className={style.phoneContainer}>
+
+                      </div>
+              </div>
+
+              <div className={style.right}>
+                 <div className={style.outputCrumbs}>
+
+                </div> 
+
+                <div className={style.outputInfoAndSort}>
+
+                </div>
+
+                <div className={style.carList}>
+                     
+                </div>
+
+              </div> 
+            </div>
+        </div> 
         <Footer/>
+
+         </>
+         }
         </div>
     )
 }
