@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -10,4 +10,9 @@ body{
     --second-text-color : #ACACAC; 
     --modal-bg-color : #FBC405;
     --btn-bg-color : #1A62CF;
+    
+}
+
+:root{
+    --slider-value: 180;
 }
