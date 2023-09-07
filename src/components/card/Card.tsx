@@ -13,6 +13,7 @@ import check from "./img/check.jpg"
 import style from "./Card.module.css"
 import { useState } from "react"
 
+
 type dataProps = {
     name: string
     similiar: string
