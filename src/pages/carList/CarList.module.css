@@ -182,3 +182,12 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .left{
+        display: none;
+    }
+    .right{
+        margin : 0;
+    }
+   
+}
