@@ -1,0 +1,576 @@
+/* Модалка с условиями аренды */
+  .modal_terms_container_show {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .modal_terms_container_hide {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    left: 0;
+    top: 0;
+    transition: z-index 0.3s ease-out;
+    z-index: -10;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+
+  .modal_terms {
+    width: 811px;
+    height: 648px;
+    border-radius: 6px;
+    background: #FFF;
+    z-index: -20;
+    opacity: -10;
+    transition: opacity 0.3s ease-out;
+    position: fixed;
+    background-color: white;
+  }
+  
+  .close {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal_terms.show {
+    z-index: 10;
+    opacity: 20;
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .modal_terms.hide {
+    animation: slide-down 0.5s ease-in forwards;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      bottom: -100%;
+    }
+    50% {
+        bottom: 8%;
+    }
+  }
+  
+  @keyframes slide-down {
+    0% {
+      bottom: 8%;
+    }
+    50% {
+      bottom: -100%;
+
+    }
+  }
+
+  .modal_terms_title {
+    width: 100%;
+    padding-top: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal_title_text {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .modal_terms hr {
+    margin-top: 15px;
+  }
+
+/* Весь контейнер */
+.car_container {
+    width: 719px;
+    border-radius: 4px;
+    border: 1px solid var(--Subtle-Gray, #ACACAC);
+    background: #FFF;
+    margin-bottom: 15px;
+}
+
+/* Контейнер с названием машины */
+.car_container_title {
+    width: 100%;
+    padding: 16px 210px 0px 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Название машины */
+.car_container_title span {
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 7px;
+}
+
+/* Серый текст рядом с названием машины */
+.car_container_title p {
+    color: var(--Subtle-Gray, #ACACAC);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 3px;
+}
+
+/* Плашка справа со скидкой */
+.car_title_discount {
+    position: absolute;
+    margin-left: 512px;
+    width: 201px;
+    height: 32px;
+    border-radius: 4px;
+    background: var(--Green, #49A01F);
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car_container_hr_mobile {
+    display: none;
+}
+
+.car_info_equipment_mobile {
+    display: none;
+}
+
+.car_title_discount_mobile {
+    display: none;
+}
+
+/* Контейнер для всей информации снизу заоголовка и до hr */
+.car_container_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px 0px 26px;
+}
+
+/* Пока изображение не передается использую background */
+.car_info_img {
+    width: 196px;
+    height: 116px;
+    background-color: red;
+}
+
+/* Контейнер для информации о дверях, коробке передач, кондере и тд */
+.car_info_equipment {
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Назначаю всем изображениям внутри контейра width и height для их лучшей обработки */
+.car_info_equipment img {
+    width: 30px;
+    height: 30px;
+}
+
+/* контейнер для количества мест, дверей и багажа */
+.car_equipment_quantities {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.car_equipment_quantities_mobile {
+    display: none;
+}
+
+/* контейнер для каждого элемента по отдельности */
+.car_equipment_quantity {
+    display: flex;
+    align-items: center;
+    margin-right: 9px;
+}
+
+/* Коробка передач */
+.car_equipment_transmission {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* Кондер */
+.car_equipment_aircon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* Шины */
+.car_equipment_tires {
+    display: flex;
+    align-items: center;
+}
+
+/* Контейнер для цен справа */
+.car_info_price {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+/* цена за день */
+.car_price_forday {
+    text-align: right;
+    color: var(--Dark-Gray, #5F5F5F);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* перечеркнутый текст */
+.car_price_discount {
+    text-align: right;
+    margin-top: 3px;
+    color: #D80027;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: line-through;
+}
+
+/* основная цена */
+.car_price_price {
+    text-align: right;
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* цена за три дня */
+.car_price_forthreeday {
+    text-align: right;
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+/* отправка на эмейл */
+.car_price_email {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 9px;
+}
+
+.car_price_email img {
+    width: 30px;
+    height: 30px;
+}
+
+/* контейнер для всего после 1 hr но до 2 hr */
+.car_container_second {
+    padding: 10px 16px 0px 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* контейнер для изображения бренда и рейтинга */
+.car_second_supplierandrating {
+    display: flex;
+}
+
+/* бренд */
+.car_second_supplier {
+    width: 73px;
+    height: 29px;
+    margin-right: 3px;
+    background-color: red;
+}
+
+/* рейтинг */
+.car_second_rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 29px;
+    border-radius: 4px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* задаем параметры для звезды внутри рейтинга */
+.car_second_rating img {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+}
+
+/* Условия и Условия аренды */
+.car_second_terms {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.car_second_term {
+    display: flex;
+    align-items: center;
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.car_second_term img {
+    margin-right: 5px;
+}
+
+/* контейнер для всего после 2 hr */
+.car_container_third {
+    padding: 12px 19px 17px 17px;
+    width: 100%;
+    display: flex;
+}
+
+/* контейнер для галочек */
+.car_third_conditions {
+    min-width: 460px;
+    max-width: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 17px;
+}
+
+.car_third_condition {
+    color: var(--SemiBlack, #313131);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    width: 230px;
+    display: flex;
+    align-items: center;
+}
+
+/* параметры для галочек */
+.car_third_condition img {
+    width: 24px;
+    height: 24px;
+}
+
+/* параметры для кнопки ДОБАВИТЬ */
+.car_container_third button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 208.417px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: var(--Link-Blue, #1A62CF);
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* параметры для 2hr */
+.car_container_hr {
+    width: 100%;
+    height: 1px;
+    background: rgba(196, 196, 196, 0.43);
+    margin: 11px 0px 0px 0px;
+}
+
+@media (max-width: 1024px) {
+    .car_container {
+        width: 100%;
+    }
+    .car_container_third {
+        justify-content: space-between;
+    }
+    .car_title_discount {
+        right: 0;
+        margin-right: 6px;
+        margin-left: 0px;
+    }
+    .car_info_img {
+        width: 136px;
+        height: 104px;
+    }
+    .car_container_info {
+        padding: 25px 12px 0 11px;
+    }
+    .car_third_conditions {
+        min-width: 129px;
+        max-width: 460px;
+        display: block;
+        margin-right: 38px;
+    }
+}
+
+@media (max-width: 580px) {
+    .car_title_discount {
+        display: none;
+    }
+    .car_info_equipment {
+        display: none;
+    }
+    .car_info_img {
+        width: 130px;
+        height: 80px;
+    }
+    .car_title_discount_mobile {
+        position: absolute;
+        width: 158px;
+        height: 32px;
+        border-radius: 4px;
+        background: var(--Green, #49A01F);
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        margin-right: 6px;
+        margin-left: 0px;
+    }
+    .car_container_second {
+        display: block;
+    }
+    .car_second_terms {
+        margin-left: 0px;
+        margin-top: 7px;
+    }
+    .car_container_hr_first {
+        margin-top: 3px;
+    }
+    .car_equipment_quantities_mobile {
+        display: flex;
+        margin-top: 3px;    
+    }
+    .car_container_hr_mobile {
+        display: block;
+    }
+    .car_info_equipment_mobile {
+        padding: 12px 0px 10px 11px;
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--SemiBlack, #313131);
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .car_equipment_transmission {
+        margin-right: 13px;
+    }
+    .car_equipment_aircon {
+        margin-right: 13px;
+    }
+    .car_container_title span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car_container_third button {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .car_container_title p {
+        font-size: 12px;
+    }
+    .car_container_third {
+        display: block;
+    }
+    .car_container_title {
+        padding: 15px 146px 0px 14px;
+    }
+    .car_second_term {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .car_title_discount_mobile {
+        width: 135px;
+        font-size: 12px;
+    }
+    .car_price_forthreeday {
+        font-size: 11px;
+    }
+    .car_price_email {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 320px) {
+    .car_second_terms {
+        display: block;
+    }
+    .car_second_term {
+        font-size: 12px;
+    }
+    .car_price_email {
+        font-size: 10px;
+    }
+    .car_equipment_quantities_mobile img {
+        width: 25px;
+        height: 25px;
+    }
+    .car_info_img {
+        width: 120px;
+        height: 75px;
+    }
+    .car_container_title {
+        font-size: 17px;
+    }
+    .car_container_info {
+        padding: 15px 10px 0 10px;
+    }
+}
