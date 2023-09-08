@@ -139,23 +139,13 @@ const CarList = () => {
                     </div>
 
                     <div className={style.carList}>
-                     
-                    </div>
-
-                </div> 
-
-                <div className={style.outputInfoAndSort}>
-
-                </div>
-
-                <div className={style.carList}>
                     {FakeDataCar.map((el) => {
                         return (
                             <Card name={el.name} similiar={el.similiar} discount={el.discount} redprice={el.redprice} price={el.price} threedayprice={el.threedayprice} rating={el.rating} />
                         )
                     })}
-                </div>
-
+                    </div>
+                </div> 
               </div> 
             </div>
         <Footer/>
