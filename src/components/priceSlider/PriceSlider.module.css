@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     height: 94px;
+    margin: 0 0 51px 0;
 }
 .priceSlider_title {
     columns: #313131;
@@ -79,4 +80,19 @@
     color : #5F5F5F;
     font-size: 14px;
     font-weight: 400;
+}
+
+@media screen and (max-width: 992px) {
+    .slider{
+        width: 189px;
+    }
+    .sliderContainer img {
+        width: 189px;
+    }
+      .sliderContainer{
+        width: 151px;
+      }
+    .sliderContainer span {
+    left: calc((100% / 252) * ((var(--slider-value)) - 33) - 10px);
+  }
 }

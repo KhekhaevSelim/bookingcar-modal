@@ -1,13 +1,19 @@
 import { OutputCrumsDataType } from "../../pages/carList/CarList";
 import style from "./outputCrumbs.module.css";
 import whiteArrow from "../../assets/icons/whiteArrow.svg";
+import backCrumbArrow from "../../assets/icons/backCrumbsArrow.svg";
+
 
 type OutputCrumbsPropsType = {
     crumbsData : Array<OutputCrumsDataType>
     activeCrumb : string
 }
 
+
 const OutputCrumbs = (props : OutputCrumbsPropsType) => {
+
+    let crumbsPartByMobile = props.crumbsData.filter(c => c.id === props.activeCrumb);
+
     return (
 
     <div className={style.outputCrumbs}>
@@ -35,6 +41,34 @@ const OutputCrumbs = (props : OutputCrumbsPropsType) => {
             </div>
                 )
             })
+            :
+            ""
+        }
+        {
+            crumbsPartByMobile.length ?
+            crumbsPartByMobile.map(c => {
+                return (
+                <div className={style.crumbsItem_mob} key={c.id}>
+                    
+                    {
+                    c.id !== "search" &&  <img src={backCrumbArrow}
+                    className={style.backCrumbArrow}/>
+                    }
+                     
+                    <div className={c.id === "search" ? style.crumbsData_mob : c.id === "options"  ? style.crumbsData_mob__center : c.id === "pay" ? style.crumbsData_mob__right : ""}>
+                        <span className={style.title_mob}>{c.title}</span>
+                        <span className={style.subTitle_mob}>{c.subTitle}</span>
+                    </div>
+                        
+                    {
+                    c.id === "search" || c.id === "options" ? <img src={whiteArrow}
+                    className={style.doneCrumbArrow}/> : ""
+                    }
+
+                </div>
+                )
+            })
+            
             :
             ""
         }

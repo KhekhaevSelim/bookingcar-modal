@@ -8,7 +8,33 @@ import filter from "../../assets/icons/filter.svg";
 import OutputCrumbs from "../../components/outputCrumbs/OutputCrumbs";
 import PriceSlider from "../../components/priceSlider/PriceSlider";
 import Card from "../../components/card/Card";
+import AT from "../../assets/icons/AT.svg";
+import MT from "../../assets/icons/MT.svg";
+import FilterItem from "../../components/filterItem/FilterItem";
+import Climat from "../../assets/icons/climat.svg";
+import MiniCar from "../../assets/icons/miniCar.svg";
+import EcoCar from "../../assets/icons/economCar.svg";
+import LuxCar from "../../assets/icons/luxCar.svg";
+import UniCar from "../../assets/icons/uniCar.svg";
+import MinivanCar from "../../assets/icons/minivanCar.svg";
+import JeepCar from "../../assets/icons/jeepCar.svg";
+import CupeCar from "../../assets/icons/cupeCar.svg";
+import StandartCar from "../../assets/icons/standartCar.svg";
+import ExclusiveCar from "../../assets/icons/exclusiveCar.svg";
+import PhoneBlock from "../../components/phoneBlock/PhoneBlock";
 
+
+export type FilterItemType = {
+    name : string
+    filters : Array<FilterType>
+}
+
+export type FilterType = {
+    id : string
+    title : string
+    icon? : string
+    rating? : number
+} 
 
 
 export type OutputCrumsDataType = {
@@ -20,7 +46,7 @@ subTitle : string
 
 const CarList = () => {
     
-    const [sliderValue, setSliderValue] = useState<string>("180")
+    const [sliderValue, setSliderValue] = useState<string>("180");
     // меняем при событии onChange вместо со стейтом и значение глобальной CSS переменной - для следования ценника на ползунком
     const handleChangeSliderValue = (event : React.ChangeEvent<HTMLInputElement>) => {
         setSliderValue(event.target.value)
@@ -31,6 +57,119 @@ const CarList = () => {
     // локальный стейк для смены класса хлебных крошек (оставить тут, все ф-ции будут запускаться отсюда скорее всего)
     const [activeCrumb, setActiveCrumb] = useState<string>("search")
     // локальный стейк для смены класса хлебных крошек (оставить тут, все ф-ции будут запускаться отсюда скорее всего)
+    
+    const filtersData : Array<FilterItemType> = [
+        {
+          name : "Коробка Передач",
+          filters : [
+            { 
+                id : "AT",
+                title : "Автоматичекская коробка",
+                icon : AT
+            },
+            {
+                id : "MT",
+                title : "Механическая коробка",
+                icon : MT
+            }
+          ]
+        },
+        {
+            name : "Комплектация",
+            filters : [
+              { 
+                  id : "Climat",
+                  title : "Кондиционер",
+                  icon : Climat
+              }
+            ]
+        },
+        {
+            name : "Класс авто",
+            filters : [
+              { 
+                  id : "Mini",
+                  title : "Мини",
+                  icon : MiniCar
+              },
+              { 
+                id : "Eco",
+                title : "Эконом",
+                icon : EcoCar
+            },
+            { 
+                id : "Standart",
+                title : "Стандарт",
+                icon : StandartCar
+            },
+            { 
+                id : "Lux",
+                title : "Люкс",
+                icon : LuxCar
+            },
+            { 
+                id : "Uni",
+                title : "Уневирсал",
+                icon : UniCar
+            },
+            { 
+                id : "Minivan",
+                title : "Минивэн",
+                icon : MinivanCar
+            },
+            { 
+                id : "Jeep",
+                title : "Внедорожник",
+                icon : JeepCar
+            },
+            { 
+                id : "Cupe",
+                title : "Купэ / Кабрио",
+                icon : CupeCar
+            },
+            { 
+                id : "Exclusive",
+                title : "Особый",
+                icon : ExclusiveCar
+            },
+            ]
+          },
+          {
+            name : "Прокатчики",
+            filters : [
+            {
+                id : "Alamo",
+                title : "Alamo",
+                rating : 8.9       
+            },
+            {
+                id : "Europcar",
+                title : "Europcar",
+                rating : 8.2       
+            },
+            {
+                id : "Thrifty",
+                title : "Thrifty",
+                rating : 7.8       
+            },
+            {
+                id : "Dollar",
+                title : "Dollar",
+                rating : 7.2       
+            },
+            {
+                id : "Hertz ",
+                title : "Hertz ",
+                rating : 4.0       
+            },
+            {
+                id : "Fox",
+                title : "Fox Rent A Car Usa",
+                rating : 6.5       
+            },
+            ]
+          }
+    ]
 
     const outputCrumsData : Array<OutputCrumsDataType> = [
         {
@@ -125,11 +264,21 @@ const CarList = () => {
                             </span>
                         </div>
                         <PriceSlider handleChangeSliderValue={handleChangeSliderValue} max={280} min={30} sliderValue={sliderValue} />
+                        {
+                        filtersData.length ? 
+                        filtersData.map(f => {
+                            return (
+                                <FilterItem filterItem={f} key={f.name}/>
+                            )
+                        })
                         
-                    </div> 
-                    <div className={style.phoneContainer}>
+                            :
+                        ""
+                        }
 
-                    </div>
+
+                    </div> 
+                    <PhoneBlock id={"32-332244"}/>
                 </div>
 
                 <div className={style.right}>
@@ -141,7 +290,8 @@ const CarList = () => {
                     <div className={style.carList}>
                     {FakeDataCar.map((el) => {
                         return (
-                            <Card name={el.name} similiar={el.similiar} discount={el.discount} redprice={el.redprice} price={el.price} threedayprice={el.threedayprice} rating={el.rating} />
+                            <Card name={el.name} key={el.name} similiar={el.similiar} discount={el.discount} 
+                                  redprice={el.redprice} price={el.price} threedayprice={el.threedayprice} rating={el.rating} />
                         )
                     })}
                     </div>
