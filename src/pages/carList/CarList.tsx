@@ -58,6 +58,10 @@ const CarList = () => {
     const [activeCrumb, setActiveCrumb] = useState<string>("search")
     // локальный стейк для смены класса хлебных крошек (оставить тут, все ф-ции будут запускаться отсюда скорее всего)
     
+    const changeActiveCrumb = (id : string) => {
+        setActiveCrumb(id)
+    }
+
     const filtersData : Array<FilterItemType> = [
         {
           name : "Коробка Передач",
@@ -259,7 +263,7 @@ const CarList = () => {
                     <div className={style.filtersContainer}>
                         <div className={style.header}>
                             <img src={filter} alt="filter" />
-                            <span>
+                            <span onClick={()=>changeActiveCrumb("asd")}>
                             ФИЛЬТРЫ
                             </span>
                         </div>
