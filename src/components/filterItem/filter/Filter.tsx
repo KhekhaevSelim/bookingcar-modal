@@ -5,20 +5,29 @@ import style from "./Filter.module.css";
 
 type FilterPropsType = {
     filter : FilterType
+    addActiveFilter : (filter : string) => void
+    activeFilters : Array<string>
 }
 
 const Filter = (props: FilterPropsType) => {
+
+    let isActiveFilter = props.activeFilters.includes(props.filter.id);
+
+
     return (
         <div className={style.container}>
             <div className={style.conatiner_leftPart}>
-                <FilterCheckBox/>
+                <FilterCheckBox addActiveFilter={props.addActiveFilter} filterId={props.filter.id} activeFilters={props.activeFilters}/>
                 <span className={style.title}>
                 {props.filter.title}
                 </span>
+           
             </div>
         
              {
-                props.filter.icon && <img src={props.filter.icon} alt={props.filter.icon} loading="lazy"/> || props.filter.rating && <Rating rating={props.filter.rating}/>
+                props.filter.icon && <img src={props.filter.icon} alt={props.filter.icon} loading="lazy" 
+                className={style.activeIcon}/> 
+                || props.filter.rating && <Rating rating={props.filter.rating}/>
             }
          
         </div>

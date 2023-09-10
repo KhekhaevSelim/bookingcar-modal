@@ -1,16 +1,32 @@
-import { useState } from "react";
 import style from "./FilterCheckBox.module.css";
 import filterChecked from "../../assets/icons/filterChecked.svg";
-const FilterCheckBox = () => {
-    const [checkBoxValue, setCheckBoxValue] = useState<boolean>(false);
+import { useEffect, useState } from "react";
+
+type FilterCheckBoxPropsType = {
+    addActiveFilter : (filter : string) => void
+    filterId : string
+    activeFilters : Array<string>
+}
+
+
+const FilterCheckBox = (props : FilterCheckBoxPropsType) => {
+    
+    const [filterCheckBoxValue, setFilterCheckBoxValue] = useState<boolean>(false);
     const handleChangeCheckBox = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setCheckBoxValue(e.target.checked)
+        setFilterCheckBoxValue(e.target.checked)
        }
+    useEffect(()=> {
+        let isClickRemoveFilter = props.activeFilters.includes(props.filterId);
+        if(!isClickRemoveFilter && filterCheckBoxValue){
+            setFilterCheckBoxValue(!filterCheckBoxValue)
+        }
+        
+    },[props.activeFilters]) 
     return (
         <div className={style.container}>
-              <input type="checkbox" className={style.hiddenCheckbox} checked={checkBoxValue} onChange={(e)=>handleChangeCheckBox(e)}/>
+              <input type="checkbox" className={style.hiddenCheckbox} checked={filterCheckBoxValue} onChange={(e)=>handleChangeCheckBox(e)} onClick={()=>props.addActiveFilter(props.filterId)}/>
               <span className={style.customCheckbox}>
-                { checkBoxValue && <img src={filterChecked} alt="checked" loading="lazy"/> }
+                {filterCheckBoxValue && <img src={filterChecked} alt="checked" loading="lazy" /> }
               </span>
         </div>
     )

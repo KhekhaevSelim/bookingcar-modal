@@ -4,6 +4,8 @@ import Filter from "./filter/Filter";
 
 type FilterItemPropsType = {
     filterItem : FilterItemType
+    addActiveFilter : (filter : string) => void
+    activeFilters : Array<string>
 }
 
 const FilterItem = (props : FilterItemPropsType) => {
@@ -16,7 +18,7 @@ const FilterItem = (props : FilterItemPropsType) => {
                 props.filterItem.filters.length ?
                 props.filterItem.filters.map( f => {
                     return (
-                        <Filter filter={f} key={f.id}/>
+                        <Filter filter={f} key={f.id} addActiveFilter={props.addActiveFilter} activeFilters={props.activeFilters}/>
                     )
                 })
                 :

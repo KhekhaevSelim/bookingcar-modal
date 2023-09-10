@@ -22,6 +22,7 @@ import CupeCar from "../../assets/icons/cupeCar.svg";
 import StandartCar from "../../assets/icons/standartCar.svg";
 import ExclusiveCar from "../../assets/icons/exclusiveCar.svg";
 import PhoneBlock from "../../components/phoneBlock/PhoneBlock";
+import ActiveFilters from "../../components/activeFilters/ActiveFilters";
 
 
 export type FilterItemType = {
@@ -36,6 +37,8 @@ export type FilterType = {
     rating? : number
 } 
 
+// export type FilterIdType = "Fox" | "Hertz" | "Dollar" | "Thrifty" | "Europcar" | "Alamo" | "Exclusive" |
+//                            "Cupe" | "Jeep" | "Minivan" | "Uni" | "Lux" | "Standart" | "Eco" | "Mini";
 
 export type OutputCrumsDataType = {
 id : string 
@@ -46,6 +49,29 @@ subTitle : string
 
 const CarList = () => {
     
+    //стейт для активных фильтров
+    const [activeFilters, setActiveFilters] = useState<Array<string>>([]);
+    
+    const addActiveFilter = (filter : string) => {
+        let updatedFilters = activeFilters || [];
+        if(activeFilters.includes(filter)) {
+            updatedFilters = activeFilters.filter(f => f !== filter)
+        } else {
+            updatedFilters = [...activeFilters, filter]
+        }
+        setActiveFilters(updatedFilters);        
+    }
+
+
+    const resetFilters = () => {
+        setActiveFilters([]);
+    }
+
+    const removeFilter = (filter : string) => {
+        setActiveFilters([...activeFilters.filter(f => f !== filter)])
+    }
+    //стейт для активных фильтров
+
     const [sliderValue, setSliderValue] = useState<string>("180");
     // меняем при событии onChange вместо со стейтом и значение глобальной CSS переменной - для следования ценника на ползунком
     const handleChangeSliderValue = (event : React.ChangeEvent<HTMLInputElement>) => {
@@ -244,6 +270,8 @@ const CarList = () => {
             rating: 7.0
         },
     ]
+
+    console.log(activeFilters)
     return (
         <div className={style.container}>
          <Header showMobileMenu={showMobileMenu} callBack={handleBurgerMenu}/>
@@ -267,12 +295,13 @@ const CarList = () => {
                             ФИЛЬТРЫ
                             </span>
                         </div>
+                        <ActiveFilters activeFilters={activeFilters} resetFilters={resetFilters} removeFilter={removeFilter}/>
                         <PriceSlider handleChangeSliderValue={handleChangeSliderValue} max={280} min={30} sliderValue={sliderValue} />
                         {
                         filtersData.length ? 
                         filtersData.map(f => {
                             return (
-                                <FilterItem filterItem={f} key={f.name}/>
+                                <FilterItem filterItem={f} key={f.name} addActiveFilter={addActiveFilter} activeFilters={activeFilters}/>
                             )
                         })
                         

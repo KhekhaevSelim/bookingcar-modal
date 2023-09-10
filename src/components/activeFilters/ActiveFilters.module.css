@@ -1,0 +1,55 @@
+.activeFiltersContainer{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #E2E2E2;
+    padding: 14px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.activeFiltersContainerEmpty{
+    width: 100%;
+    height: auto;
+    border-bottom: none;
+    padding: 14px 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.activeFilter{
+    background-color : #1A62CF;
+    width: 105px;
+    height: 28px;
+    border-radius: 4px;
+    padding: 6px 9px 5px 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3px 8px 0;
+}
+.resetFilter{
+    background-color : white;
+    width: 134px;
+    height: 28px;
+    border: solid 1px #1A62CF ;
+    border-radius: 4px;
+    padding: 6px 9px 5px 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3px 8px 0;
+}
+.activeFilter span {
+    color : white;
+    font-size: 14px;
+    font-weight: 400;
+}
+.resetFilter span{
+    color : #1A62CF;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.removeFilter {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}

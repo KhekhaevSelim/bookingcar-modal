@@ -27,7 +27,7 @@
 
 .filtersContainer{
     width: 252px;
-    height: 1371px;
+    min-height: 1371px;
     border: solid #ACACAC 1px;
     border-radius: 4px;
     margin-bottom: 13px;
@@ -85,6 +85,7 @@
     left: 17px;
     top: 3px;
 }
+
 
 @media screen and (max-width: 992px) {
     .left{
