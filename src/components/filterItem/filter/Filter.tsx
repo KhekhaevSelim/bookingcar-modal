@@ -15,17 +15,17 @@ const Filter = (props: FilterPropsType) => {
 
 
     return (
-        <div className={style.container}>
+        <div className={isActiveFilter ? style.containerActive : style.container}>
             <div className={style.conatiner_leftPart}>
                 <FilterCheckBox addActiveFilter={props.addActiveFilter} filterId={props.filter.id} activeFilters={props.activeFilters}/>
-                <span className={style.title}>
+                <span className={isActiveFilter ? style.titleActive : style.title}>
                 {props.filter.title}
                 </span>
            
             </div>
         
              {
-                props.filter.icon && <img src={props.filter.icon} alt={props.filter.icon} loading="lazy" 
+                props.filter.icon && <img src={isActiveFilter ? props.filter.iconAct : props.filter.icon} alt={props.filter.icon} loading="lazy" 
                 className={style.activeIcon}/> 
                 || props.filter.rating && <Rating rating={props.filter.rating}/>
             }

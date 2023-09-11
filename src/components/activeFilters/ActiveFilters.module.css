@@ -16,7 +16,8 @@
 }
 .activeFilter{
     background-color : #1A62CF;
-    width: 105px;
+    width: auto;
+    min-width: 63px;
     height: 28px;
     border-radius: 4px;
     padding: 6px 9px 5px 13px;
@@ -29,7 +30,7 @@
     background-color : white;
     width: 134px;
     height: 28px;
-    border: solid 1px #1A62CF ;
+    border: solid 2px #1A62CF ;
     border-radius: 4px;
     padding: 6px 9px 5px 13px;
     display: flex;
@@ -41,6 +42,7 @@
     color : white;
     font-size: 14px;
     font-weight: 400;
+    margin: 0 7px 0 0;
 }
 .resetFilter span{
     color : #1A62CF;

@@ -25,7 +25,7 @@ const FilterCheckBox = (props : FilterCheckBoxPropsType) => {
     return (
         <div className={style.container}>
               <input type="checkbox" className={style.hiddenCheckbox} checked={filterCheckBoxValue} onChange={(e)=>handleChangeCheckBox(e)} onClick={()=>props.addActiveFilter(props.filterId)}/>
-              <span className={style.customCheckbox}>
+              <span className={filterCheckBoxValue ? style.customCheckboxActive : style.customCheckbox}>
                 {filterCheckBoxValue && <img src={filterChecked} alt="checked" loading="lazy" /> }
               </span>
         </div>

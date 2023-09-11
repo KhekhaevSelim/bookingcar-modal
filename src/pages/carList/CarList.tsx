@@ -9,18 +9,30 @@ import OutputCrumbs from "../../components/outputCrumbs/OutputCrumbs";
 import PriceSlider from "../../components/priceSlider/PriceSlider";
 import Card from "../../components/card/Card";
 import AT from "../../assets/icons/AT.svg";
+import ATact from "../../assets/icons/ATact.svg";
 import MT from "../../assets/icons/MT.svg";
+import MTact from "../../assets/icons/MTact.svg";
 import FilterItem from "../../components/filterItem/FilterItem";
 import Climat from "../../assets/icons/climat.svg";
+import Climatact from "../../assets/icons/climatact.svg";
 import MiniCar from "../../assets/icons/miniCar.svg";
+import MiniCaract from "../../assets/icons/miniCaract.svg";
 import EcoCar from "../../assets/icons/economCar.svg";
+import EcoCaract from "../../assets/icons/economCaract.svg";
 import LuxCar from "../../assets/icons/luxCar.svg";
+import LuxCaract from "../../assets/icons/luxCaract.svg";
 import UniCar from "../../assets/icons/uniCar.svg";
+import UniCaract from "../../assets/icons/uniCaract.svg";
 import MinivanCar from "../../assets/icons/minivanCar.svg";
+import MinivanCaract from "../../assets/icons/minivanCaract.svg";
 import JeepCar from "../../assets/icons/jeepCar.svg";
+import JeepCaract from "../../assets/icons/jeepCaract.svg";
 import CupeCar from "../../assets/icons/cupeCar.svg";
+import CupeCaract from "../../assets/icons/cupeCaract.svg";
 import StandartCar from "../../assets/icons/standartCar.svg";
+import StandartCaract from "../../assets/icons/standartCaract.svg";
 import ExclusiveCar from "../../assets/icons/exclusiveCar.svg";
+import ExclusiveCaract from "../../assets/icons/exclusiveCaract.svg";
 import PhoneBlock from "../../components/phoneBlock/PhoneBlock";
 import ActiveFilters from "../../components/activeFilters/ActiveFilters";
 
@@ -34,6 +46,7 @@ export type FilterType = {
     id : string
     title : string
     icon? : string
+    iconAct? : string
     rating? : number
 } 
 
@@ -95,12 +108,15 @@ const CarList = () => {
             { 
                 id : "AT",
                 title : "Автоматичекская коробка",
-                icon : AT
+                icon : AT,
+                iconAct : ATact
+
             },
             {
                 id : "MT",
                 title : "Механическая коробка",
-                icon : MT
+                icon : MT,
+                iconAct : MTact
             }
           ]
         },
@@ -110,7 +126,8 @@ const CarList = () => {
               { 
                   id : "Climat",
                   title : "Кондиционер",
-                  icon : Climat
+                  icon : Climat,
+                  iconAct : Climatact
               }
             ]
         },
@@ -120,47 +137,56 @@ const CarList = () => {
               { 
                   id : "Mini",
                   title : "Мини",
-                  icon : MiniCar
+                  icon : MiniCar,
+                  iconAct : MiniCaract
               },
               { 
                 id : "Eco",
                 title : "Эконом",
-                icon : EcoCar
+                icon : EcoCar,
+                iconAct : EcoCaract
             },
             { 
                 id : "Standart",
                 title : "Стандарт",
-                icon : StandartCar
+                icon : StandartCar,
+                iconAct : StandartCaract
             },
             { 
                 id : "Lux",
                 title : "Люкс",
-                icon : LuxCar
+                icon : LuxCar,
+                iconAct : LuxCaract
             },
             { 
                 id : "Uni",
                 title : "Уневирсал",
-                icon : UniCar
+                icon : UniCar,
+                iconAct : UniCaract
             },
             { 
                 id : "Minivan",
                 title : "Минивэн",
-                icon : MinivanCar
+                icon : MinivanCar,
+                iconAct : MinivanCaract
             },
             { 
                 id : "Jeep",
                 title : "Внедорожник",
-                icon : JeepCar
+                icon : JeepCar,
+                iconAct : JeepCaract
             },
             { 
                 id : "Cupe",
                 title : "Купэ / Кабрио",
-                icon : CupeCar
+                icon : CupeCar,
+                iconAct : CupeCaract
             },
             { 
                 id : "Exclusive",
                 title : "Особый",
-                icon : ExclusiveCar
+                icon : ExclusiveCar,
+                iconAct : ExclusiveCaract
             },
             ]
           },
