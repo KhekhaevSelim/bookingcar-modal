@@ -1,4 +1,4 @@
-import { FilterType } from "../../../pages/carList/CarList";
+import { FilterType } from "../../../entities/filtersData";
 import FilterCheckBox from "../../filterCheckBox/FilterCheckBox";
 import Rating from "../../ratingIcon/RatingIcon";
 import style from "./Filter.module.css";

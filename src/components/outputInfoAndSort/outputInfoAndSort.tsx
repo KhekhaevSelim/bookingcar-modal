@@ -28,7 +28,7 @@ const OutputInfoAndSort = (props : OutputInfoAndSortPropsType) => {
              </span>
              <div className={style.sortSelect}>
                 <span className={style.sortBy}><span className={style.count}>Цене</span> (низкая-высокая)</span>
-                <img src={toggleIcon} alt="toggle" className={toggle ? style.toggleOn : style.toggleOff}/>
+                <img src={toggleIcon} alt="toggle" className={toggle ? style.toggleOn : style.toggleOff} onClick={()=>setToggle(!toggle)}/>
              </div>
             </div>
           </div>

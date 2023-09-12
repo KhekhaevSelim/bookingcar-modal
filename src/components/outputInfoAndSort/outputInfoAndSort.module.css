@@ -51,12 +51,14 @@ color : #313131;
     width: 22px;
     height: 12px;
     transform: rotate(0deg);
+    cursor: pointer;
 }
 
 .toggleOff{
     width: 22px;
     height: 12px;
-    transform: rotate(0deg);
+    transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .filtersBtn {

@@ -1,4 +1,4 @@
-import { FilterItemType } from "../../pages/carList/CarList";
+import { FilterItemType } from "../../entities/filtersData";
 import style from "./FilterItem.module.css";
 import Filter from "./filter/Filter";
 

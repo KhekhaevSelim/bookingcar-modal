@@ -77,9 +77,9 @@ const CarList = () => {
     const [activeCrumb, setActiveCrumb] = useState<string>("search")
     // локальный стейк для смены класса хлебных крошек (оставить тут, все ф-ции будут запускаться отсюда скорее всего)
     
-    const changeActiveCrumb = (id : string) => {
-        setActiveCrumb(id)
-    }
+    // const changeActiveCrumb = (id : string) => {
+    //     setActiveCrumb(id)
+    // }
 
    
 
@@ -202,7 +202,7 @@ const CarList = () => {
                     <PhoneBlock id={"32-332244"}/>
                 </div>
 
-                  <div className={style.right}>
+                  <div className={style.right} onClick={()=>setActiveCrumb("s")}>
                        <OutputCrumbs crumbsData={outputCrumsData} activeCrumb={activeCrumb}/>
                        <OutputInfoAndSort activeFilters={activeFilters} removeFilter={removeFilter} resetFilters={resetFilters} toggleOnMobFilters={toggleOnMobFilters}/>
                     

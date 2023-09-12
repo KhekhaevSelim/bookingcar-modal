@@ -1,4 +1,4 @@
-import { OutputCrumsDataType } from "../../pages/carList/CarList";
+import { OutputCrumsDataType } from "../../entities/OutputCrumsData";
 import style from "./outputCrumbs.module.css";
 import whiteArrow from "../../assets/icons/whiteArrow.svg";
 import backCrumbArrow from "../../assets/icons/backCrumbsArrow.svg";
