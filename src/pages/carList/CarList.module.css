@@ -30,8 +30,8 @@
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    background-image: url("../../assets/icons/bgPreloader.svg");
-    filter: brightness(42%);
+    /* background-image: url("../../assets/icons/bgPreloader.svg"); */
+    filter: brightness(50%);
     background-color: #999999bd;
     padding-right: 5px;
     margin-top: 130px;
