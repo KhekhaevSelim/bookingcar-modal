@@ -202,7 +202,7 @@ const CarList = () => {
                     <PhoneBlock id={"32-332244"}/>
                 </div>
 
-                  <div className={style.right} onClick={()=>setActiveCrumb("s")}>
+                  <div className={style.right} onClick={()=>setActiveCrumb("sd")}>
                        <OutputCrumbs crumbsData={outputCrumsData} activeCrumb={activeCrumb}/>
                        <OutputInfoAndSort activeFilters={activeFilters} removeFilter={removeFilter} resetFilters={resetFilters} toggleOnMobFilters={toggleOnMobFilters}/>
                     
