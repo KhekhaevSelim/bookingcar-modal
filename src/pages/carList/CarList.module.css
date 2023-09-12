@@ -30,7 +30,7 @@
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    background-image: url(/bookingcar-modal/src/assets/bgPreloader.svg);
+    background-image: url("/bookingcar-modal/src/assets/bgPreloader.svg");
     filter: brightness(60%);
     padding-right: 5px;
     margin-top: 130px;
