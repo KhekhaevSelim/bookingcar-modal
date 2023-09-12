@@ -1,19 +1,19 @@
 .activeFiltersContainer{
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #E2E2E2;
-    padding: 14px 15px;
+    padding: 14px 15px 6px 15px;
     display: flex;
     flex-wrap: wrap;
 }
-.activeFiltersContainerEmpty{
+
+.activeFiltersContainerMobile{
     width: 100%;
     height: auto;
-    border-bottom: none;
-    padding: 14px 15px;
+    padding: 14px 15px 6px 15px;
     display: flex;
     flex-wrap: wrap;
 }
+
 .activeFilter{
     background-color : #1A62CF;
     width: auto;
@@ -48,6 +48,7 @@
     color : #1A62CF;
     font-size: 14px;
     font-weight: 400;
+
     
 }
 .removeFilter {

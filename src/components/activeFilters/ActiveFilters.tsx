@@ -5,11 +5,13 @@ type ActiveFiltersPropsType = {
     activeFilters : Array<string> | []
     resetFilters : () => void
     removeFilter : (filter : string) => void
+    isMobile : boolean
 }
 
 const ActiveFilters = (props : ActiveFiltersPropsType) => {
+    console.log(props.isMobile)
     return (
-        <div className={props.activeFilters.length ? style.activeFiltersContainer : style.activeFiltersContainerEmpty}>
+        <div className={props.isMobile ? style.activeFiltersContainer : style.activeFiltersContainerMobile}>
             {
                 props.activeFilters.length ? 
                 props.activeFilters.map(f => {

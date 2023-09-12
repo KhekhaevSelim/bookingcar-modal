@@ -11,7 +11,7 @@ type FilterCheckBoxPropsType = {
 
 const FilterCheckBox = (props : FilterCheckBoxPropsType) => {
     
-    const [filterCheckBoxValue, setFilterCheckBoxValue] = useState<boolean>(false);
+    const [filterCheckBoxValue, setFilterCheckBoxValue] = useState<boolean>(props.activeFilters.includes(props.filterId));
     const handleChangeCheckBox = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFilterCheckBoxValue(e.target.checked)
        }

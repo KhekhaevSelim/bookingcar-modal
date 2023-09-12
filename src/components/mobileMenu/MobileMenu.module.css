@@ -76,7 +76,7 @@
 .container :nth-child(6){
     
     position: relative;
-    left: 13px;
+    left: 18px;
     top: 2px;
 
 }
@@ -93,7 +93,7 @@
 
 .container :nth-child(7){
     position: relative;
-    left: 13px;
+    left: 18px;
     top: 2px;
 }
 .container :nth-child(7) img{
@@ -145,7 +145,7 @@
 
 .container :nth-child(10){
     position: relative;
-    right: -11px;
+    right: -18px;
     top: 12px;
 }
 
@@ -157,7 +157,7 @@
 
 .container :nth-child(11){
     position: relative;
-    right: -11px;
+    right: -20px;
     top: 12px;
 }
 .container :nth-child(11) span{
@@ -167,7 +167,7 @@
 }
 .container :nth-child(12){
     position: relative;
-    right: -11px;
+    right: -20px;
     top: 12px;
 }
 .container :nth-child(12) span{
@@ -177,7 +177,7 @@
 }
 .container :nth-child(13){
     position: relative;
-    right: -11px;
+    right: -20px;
     top: 12px;
 }
 .container :nth-child(13) span{
@@ -187,7 +187,7 @@
 }
 .container :nth-child(14){
     position: relative;
-    right: -11px;
+    right: -20px;
     top: 12px;
 }
 .container :nth-child(14) span{

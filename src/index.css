@@ -10,9 +10,18 @@ body{
     --second-text-color : #ACACAC; 
     --modal-bg-color : #FBC405;
     --btn-bg-color : #1A62CF;
-    
+
 }
 
 :root{
     --slider-value: 180;
 }
+::-webkit-scrollbar {
+    background-color: #ffffff;
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 12px;
+  }

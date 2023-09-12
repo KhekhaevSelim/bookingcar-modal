@@ -21,6 +21,7 @@ type dataProps = {
     price: number
     threedayprice: number
     rating: number
+    handleLoading : () => void
 }
 
 const Card = (data : dataProps) => {
@@ -189,7 +190,7 @@ const Card = (data : dataProps) => {
                         <img src={check} alt="" />Бесплатный GPS
                         </div>
                     </div>
-                    <button>ВЫБРАТЬ</button>
+                    <button onClick={()=>data.handleLoading()}>ВЫБРАТЬ</button>
                 </div>
             </div>
             </>

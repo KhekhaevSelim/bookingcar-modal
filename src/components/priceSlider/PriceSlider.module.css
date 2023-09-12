@@ -96,3 +96,38 @@
     left: calc((100% / 252) * ((var(--slider-value)) - 33) - 10px);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .priceSlider{
+    background-color: white;
+    width: 90%;
+    border: 1px solid #ACACAC;
+    border-radius: 4px;
+    margin: 0 0 6px 0;
+    height: 180px;
+    padding: 10px 20px;
+  }
+  .sliderContainer{
+    width: 100%;
+    left: 0;
+  }
+  .sliderContainer img{
+    width: 100%;
+  }
+  .slider{
+    width: 100%;
+  }
+  .priceSlider_title{
+    left: 0;
+    top: 0;
+  }
+  .priceRange{
+    padding: 0;
+    position: relative;
+    top: 117px;
+  }
+  .sliderContainer span {
+    left: calc((100% / 266) * ((var(--slider-value)) - 33) - 15px);
+    font-size: 14px;
+  }
+}

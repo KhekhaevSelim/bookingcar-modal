@@ -1,16 +1,41 @@
+
 .container{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
 
+}
+.displayLoad{
+    width: 87px;
+    height: 84px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+}
+.hiddenLoad{
+    display: none;
+}
 .centalBlock{
     flex-grow: 1;
     display: flex;
     justify-content: center;
+    margin-top: 130px;
+    padding-top: 40px;
+    background-color: #F8F8F8;
 }
-
+.centalBlockLoading{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    background-image: url(/bookingcar-modal/src/assets/bgPreloader.svg);
+    filter: brightness(60%);
+    padding-right: 5px;
+    margin-top: 130px;
+    padding-top: 40px;
+}
 .wrapper{
     width: 100%;
     max-width: 990px;
@@ -33,6 +58,7 @@
     margin-bottom: 13px;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
 
@@ -41,6 +67,7 @@
     max-width: 719px;
     margin-left: 19px;
     border-radius: 4px;
+    
 }
 .outputCrumbs{
     width: 100%;
@@ -50,11 +77,7 @@
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
-}
-
-.outputInfoAndSort{
-    width: 100%;
-    height: 55px;
+    background-color: white;
 }
 
 .carList{
@@ -86,7 +109,38 @@
     top: 3px;
 }
 
+.mobileFilters{
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
 
+}
+
+.mobileFiltersHeader{
+    background-color: #F8F8F8;
+    height: 114px;
+    border-bottom: solid 1px #ACACAC;
+    width: 100%;
+    margin: 0 0 25px 0;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.back{
+    font-size: 18px;
+    font-weight: 400;
+    color : #313131;
+    cursor: pointer;
+}
+.reset{
+    font-size: 18px;
+    font-weight: 400;
+    color : #1A62CF;
+    cursor: pointer;
+}
 @media screen and (max-width: 992px) {
     .left{
         width: 220px;
@@ -104,5 +158,8 @@
     .right{
         margin : 0;
     }
+   .centalBlock{
+    padding-top: 76px;
+   }
    
 }

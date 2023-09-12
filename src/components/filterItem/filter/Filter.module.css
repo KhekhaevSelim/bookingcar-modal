@@ -48,3 +48,22 @@
 /* .container img{
     width: 50px;
 } */
+
+@media screen and (max-width: 767px) {
+    .container, .containerActive{
+        width: 97%;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        padding: 10px 14px 10px 14px;
+    }
+    .containerActive{
+        padding: 10px 12px 10px 12px;
+    }
+    .title, .titleActive{
+        margin-left: 12px;
+    }
+}
